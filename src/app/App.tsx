@@ -14,10 +14,7 @@ const App = () => {
     return ( 
         <div className={classNames('app', {}, [theme])}> 
             <Navbar />
-            <AppRouter />
-            <button onClick={toggleTheme}>
-                Change Theme
-            </button>
+            <AppRouter />  
         </div>
     );
 }

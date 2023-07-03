@@ -1,0 +1,13 @@
+.ThemeSwitcher {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    fill: var(--inverted-color);
+    margin-top: 7px;
+}
+
+.darkIcon {
+    margin: 10px 0 0 6px;
+}
