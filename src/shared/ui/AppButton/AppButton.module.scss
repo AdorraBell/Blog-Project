@@ -5,7 +5,6 @@
 
 .clear {
     padding: 0;
-    margin: 0;
     border: none;
     background: none;
     outline: none;
@@ -22,12 +21,13 @@
             rgba(0, 0, 0, 0.12) 0px 4px 6px, 
             rgba(0, 0, 0, 0.17) 0px 12px 13px, 
             rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 2px 5px;
 }
 
-.circle_shadow_45_drib {
-    width: 45px;
-    height: 45px;
-    background: transparent;
+.button_drib {
+    min-width: 45px;
+    min-height: 45px;
+    background: var(--primary-color);
     border-radius: 15px;
     border: none;
     box-shadow: inset rgba(0, 0, 0, 0.25) 0px 5px 5px, 
@@ -36,4 +36,6 @@
             rgba(0, 0, 0, 0.17) 0px 12px 13px, 
             rgba(0, 0, 0, 0.09) 0px -3px 5px;
     background-clip: border-box;
+    padding: 2px 5px;
+    color: var(--inverted-color);
 }

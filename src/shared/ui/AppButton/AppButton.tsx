@@ -5,7 +5,7 @@ import { ButtonHTMLAttributes, FC } from 'react';
 export enum ThemeButton {
     CLEAR = 'clear',
     CIRCLE_SHADOW_45 = 'circle_shadow_45',
-    CIRCLE_SHADOW_45_DRIB = 'circle_shadow_45_drib'
+    BUTTON_DRIB = 'button_drib'
 }
 
 interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
@@ -24,7 +24,7 @@ export const AppButton: FC<AppButtonProps> = (props) => {
 
     return (
         <button 
-            className={classNames(cls.Button, {}, [cls[theme]])}
+            className={classNames(cls.Button, {}, [cls[theme], className])}
             {...otherProps} >
             {children}
         </button>

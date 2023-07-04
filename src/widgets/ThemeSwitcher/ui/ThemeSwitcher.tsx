@@ -15,23 +15,19 @@ export const ThemeSwitcher = ({className}: ThemeSwitcherProps) => {
     const {theme, toggleTheme} = useTheme();
 
     return ( 
-        <>
-            <AppButton 
-                onClick={toggleTheme}
-                theme={ThemeButton.CIRCLE_SHADOW_45_DRIB}
-                className={cls.ThemeSwitcher}
-                 >
-                    { theme === Theme.LIGHT ?
-                        <LightIcon 
-                        className={classNames(cls.icon, {}, [])} />
-                        :
-                        <DarkIcon 
-                        className={classNames(cls.icon, {}, [cls.darkIcon])} />
-                    }
-            </AppButton>
-                   
-        </>
-        
+        <AppButton 
+            onClick={toggleTheme}
+            theme={ThemeButton.BUTTON_DRIB}
+            className={classNames(cls.ThemeSwitcher, {}, [className])}
+                >
+                { theme === Theme.LIGHT ?
+                    <DarkIcon 
+                    className={classNames(cls.icon, {}, [cls.darkIcon])} />
+                    :
+                    <LightIcon 
+                    className={classNames(cls.icon, {}, [])} />
+                }
+        </AppButton>
     );
 }
  
