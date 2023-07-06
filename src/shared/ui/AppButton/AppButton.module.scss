@@ -1,41 +1,42 @@
-
 .Button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .clear {
-    padding: 0;
-    border: none;
-    background: none;
-    outline: none;
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
 }
 
 .circle_shadow_45 {
-    width: 45px;
-    height: 45px;
-    background: transparent;
-    border-radius: 15px;
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
-            rgba(0, 0, 0, 0.12) 0px -12px 30px, 
-            rgba(0, 0, 0, 0.12) 0px 4px 6px, 
-            rgba(0, 0, 0, 0.17) 0px 12px 13px, 
-            rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    padding: 2px 5px;
+  width: 45px;
+  height: 45px;
+  background: transparent;
+  border-radius: 15px;
+  border: none;
+  box-shadow:
+    rgb(0 0 0 / 25%) 0 54px 55px,
+    rgb(0 0 0 / 12%) 0 -12px 30px,
+    rgb(0 0 0 / 12%) 0 4px 6px,
+    rgb(0 0 0 / 17%) 0 12px 13px,
+    rgb(0 0 0 / 9%) 0 -3px 5px;
+  padding: 2px 5px;
 }
 
 .button_drib {
-    min-width: 45px;
-    min-height: 45px;
-    background: var(--primary-color);
-    border-radius: 15px;
-    border: none;
-    box-shadow: inset rgba(0, 0, 0, 0.25) 0px 5px 5px, 
-            rgba(0, 0, 0, 0.12) 0px -12px 30px, 
-            rgba(0, 0, 0, 0.12) 0px 4px 6px, 
-            rgba(0, 0, 0, 0.17) 0px 12px 13px, 
-            rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    background-clip: border-box;
-    padding: 2px 5px;
-    color: var(--inverted-color);
+  min-width: 45px;
+  min-height: 45px;
+  background: var(--primary-color);
+  border-radius: 15px;
+  border: none;
+  box-shadow:
+    inset rgb(0 0 0 / 25%) 0 5px 5px,
+    rgb(0 0 0 / 12%) 0 -12px 30px,
+    rgb(0 0 0 / 12%) 0 4px 6px,
+    rgb(0 0 0 / 17%) 0 12px 13px,
+    rgb(0 0 0 / 9%) 0 -3px 5px;
+  background-clip: border-box;
+  padding: 2px 5px;
+  color: var(--inverted-color);
 }
