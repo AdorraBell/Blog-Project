@@ -4,7 +4,7 @@ import cls from './AppButton.module.scss';
 
 export enum ThemeButton {
     CLEAR = 'clear',
-    CIRCLE_SHADOW_45 = 'circle_shadow_45',
+    CIRCLE_SHADOW = 'circle_shadow',
     BUTTON_DRIB = 'button_drib'
 }
 

@@ -1,0 +1,10 @@
+.AppLoader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: conic-gradient(var(--inverted-bg-color) 10%, var(--secondary-color));
+  mask: radial-gradient(farthest-side, var(--inverted-bg-color) calc(100% - 8px), var(--inverted-bg-color) 0);
+  animation: s3 1s infinite linear;
+}
+
+@keyframes s3 { to { transform: rotate(1turn); } }
