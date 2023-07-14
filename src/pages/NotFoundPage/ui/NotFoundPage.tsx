@@ -13,9 +13,7 @@ export const NotFoundPage = ({className}: NotFoundPageProps) => {
 
   return (
     <div className={classNames(cls.NotFoundPage, {}, [className])}>
-      <div className={cls.NotFoundPage_text}>
-        {t('Page is not found')}
-      </div>
+      {t('Page is not found')}
       <Link to='/'>
         <AppButton theme={ThemeButton.CIRCLE_SHADOW}> 
           {t('Go Home')}

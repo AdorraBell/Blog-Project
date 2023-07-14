@@ -5,5 +5,8 @@
     "About": "About",
     "Toggle": "Toggle",
     "Page is not found": "Page is not found",
-    "Go Home": "Go Home"
+    "Go Home": "Go Home",
+    "Something went wrong": "Something went wrong",
+    "Reload page": "Reload page",
+    "Throw Error": "Throw Error"
 }
