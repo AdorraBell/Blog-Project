@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import  AboutPage  from './AboutPage'; // экспорт дефолтный, так как лейзи лоадинг
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'shared/config/theme/ThemeContext';
-
+import AboutPage from './AboutPage'; // экспорт дефолтный, так как лейзи лоадинг
 
 const meta: Meta<typeof AboutPage> = {
   title: 'pages/AboutPage',
@@ -12,12 +11,11 @@ const meta: Meta<typeof AboutPage> = {
 export default meta;
 type Story = StoryObj<typeof AboutPage>;
 
-
 export const Light: Story = {
   args: {},
 };
 
 export const Dark = {
   args: {},
-  decorators: [ThemeDecorator(Theme.DARK)]
+  decorators: [ThemeDecorator(Theme.DARK)],
 };

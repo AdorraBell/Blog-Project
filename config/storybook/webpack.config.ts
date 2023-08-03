@@ -4,7 +4,7 @@ import { buildCssLoader } from '../build/loaders/buildCssLoader';
 
 const path = require('path');
 
-export default ({config}: {config: webpack.Configuration}) => {
+export default ({ config }: {config: webpack.Configuration}) => {
   const paths: BuildPaths = {
     build: '',
     html: '',
@@ -14,22 +14,22 @@ export default ({config}: {config: webpack.Configuration}) => {
   config.resolve?.modules?.push(paths.src);
   config.resolve?.extensions?.push('ts', 'tsx');
 
-  //@ts-ignore
+  /* eslint-disable no-param-reassign */ // @ts-ignore
   config.module.rules = config.module.rules.map((rule: webpack.RuleSetRule) => {
-    // исключаем все правила работающие с svg 
-    if(/svg/.test(rule.test as string)) {
-      return {...rule, exclude: /\.svg$/i}
+    // исключаем все правила работающие с svg
+    if (/svg/.test(rule.test as string)) {
+      return { ...rule, exclude: /\.svg$/i };
     }
     // возвращаем правило, если оно никак не связано с svg
     return rule;
-  })
+  });
 
   config.module?.rules?.push({
     test: /\.svg$/,
     use: ['@svgr/webpack'],
   });
-  config.module?.rules?.push(buildCssLoader(true)); //можно true, так как storybook будет использоваться только
+  config.module?.rules?.push(buildCssLoader(true)); // можно true, так как storybook будет использоваться только
   // на этапе разработки
 
   return config;
-}
+};

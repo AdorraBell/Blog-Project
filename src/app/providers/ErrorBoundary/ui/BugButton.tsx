@@ -5,23 +5,23 @@ import { useTranslation } from 'react-i18next';
 // component to test the error boundary
 
 export const BugButton = () => {
-
   const [error, setError] = useState(false);
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   const throwError = () => {
     setError(!error);
-  }
+  };
 
   useEffect(() => {
     if (error) throw new Error();
-  }, [error])
+  }, [error]);
 
   return (
-    <AppButton 
+    <AppButton
       theme={ThemeButton.CIRCLE_SHADOW}
-      onClick={throwError}>
+      onClick={throwError}
+    >
       {t('Throw Error')}
     </AppButton>
   );
-}
+};

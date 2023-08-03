@@ -6,33 +6,33 @@
 import path from 'path';
 
 export default {
-    clearMocks: true,
-    testEnvironment: 'jsdom',
-    coveragePathIgnorePatterns: [
-        '\\\\node_modules\\\\',
-    ],
-    moduleFileExtensions: [
-        'js',
-        'jsx',
-        'ts',
-        'tsx',
-        'json',
-        'node',
-    ],
-    moduleDirectories: [
-        'node_modules',
-    ],
-    testMatch: [
-        // заменена стандартная регулярка, так как есть разница в её работе на мак и виндовс
-        '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
-    ],
-    rootDir: '../../',
-    modulePaths: ['<rootDir>src'],
-    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
-    moduleNameMapper: {
-        '\\.(s?css)$': 'identity-obj-proxy',
-        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
-    },
+  clearMocks: true,
+  testEnvironment: 'jsdom',
+  coveragePathIgnorePatterns: [
+    '\\\\node_modules\\\\',
+  ],
+  moduleFileExtensions: [
+    'js',
+    'jsx',
+    'ts',
+    'tsx',
+    'json',
+    'node',
+  ],
+  moduleDirectories: [
+    'node_modules',
+  ],
+  testMatch: [
+    // заменена стандартная регулярка, так как есть разница в её работе на мак и виндовс
+    '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
+  ],
+  rootDir: '../../',
+  modulePaths: ['<rootDir>src'],
+  setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+  moduleNameMapper: {
+    '\\.(s?css)$': 'identity-obj-proxy',
+    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+  },
 
   // All imported modules in your tests should be mocked automatically
   // automock: false,

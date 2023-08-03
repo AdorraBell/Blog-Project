@@ -5,11 +5,8 @@ interface AppLoaderProps {
     className?: string
 }
 
-export const AppLoader = ({className}: AppLoaderProps) => {
-
-  return (
-    <div className={classNames(cls.AppLoader, {}, [className])}>
-      <div className={cls.Loader}></div>
-    </div>
-  );
-}
+export const AppLoader = ({ className }: AppLoaderProps) => (
+  <div className={classNames(cls.AppLoader, {}, [className])}>
+    <div className={cls.Loader} />
+  </div>
+);

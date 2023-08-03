@@ -5,4 +5,4 @@ export const ThemeDecorator = (theme: Theme) => (story: () => StoryFn) => (
   <div className={`app ${theme}`}>
     {story()}
   </div>
-)
+);

@@ -44,7 +44,6 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     exclude: /node_modules/,
   };
 
-  
   return [
     fileLoader,
     svgLoader,

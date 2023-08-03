@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { AppLink, AppLinkTheme } from './AppLink';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'shared/config/theme/ThemeContext';
-
+import { AppLink, AppLinkTheme } from './AppLink';
 
 const meta: Meta<typeof AppLink> = {
   title: 'shared/AppLink',
@@ -13,34 +12,33 @@ const meta: Meta<typeof AppLink> = {
   tags: ['autodocs'],
   args: {
     to: '/',
-    children: 'text'
-  }
+    children: 'text',
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof AppLink>;
 
-
 export const Menu: Story = {
   args: {
-    theme: AppLinkTheme.MENU
+    theme: AppLinkTheme.MENU,
   },
 };
 
 export const MenuDark = {
   args: {
-    theme: AppLinkTheme.MENU
+    theme: AppLinkTheme.MENU,
   },
-  decorators: [ThemeDecorator(Theme.DARK)]
+  decorators: [ThemeDecorator(Theme.DARK)],
 };
 
 export const Normal = {
   args: {
-    theme: AppLinkTheme.NORMAL
+    theme: AppLinkTheme.NORMAL,
   },
 };
 
 export const NormalDark = {
   args: {},
-  decorators: [ThemeDecorator(Theme.DARK)]
+  decorators: [ThemeDecorator(Theme.DARK)],
 };
