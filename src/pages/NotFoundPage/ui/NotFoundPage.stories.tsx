@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import  NotFoundPage  from './NotFoundPage'; // экспорт дефолтный, так как лейзи лоадинг
+import  { NotFoundPage }  from './NotFoundPage';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'shared/config/theme/ThemeContext';
 
