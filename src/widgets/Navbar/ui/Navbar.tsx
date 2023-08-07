@@ -27,7 +27,6 @@ export const Navbar = ({ className }: NavbarProps) => {
           {t('Main')}
         </AppLink>
       </div>
-
     </div>
   );
 };
