@@ -4,8 +4,8 @@ import cls from './AppButton.module.scss';
 
 export enum ThemeButton {
     CLEAR = 'clear',
-    CIRCLE_SHADOW = 'circle_shadow',
-    BUTTON_DRIB = 'button_drib'
+    SHADOW = 'shadow',
+    DRIB = 'drib'
 }
 
 interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{

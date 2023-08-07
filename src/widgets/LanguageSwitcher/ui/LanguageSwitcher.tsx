@@ -2,10 +2,11 @@ import { useTranslation } from 'react-i18next';
 import { AppButton, ThemeButton } from 'shared/ui/AppButton/AppButton';
 
 interface LanguageSwitcherProps{
-    className?: string
+    className?: string,
+    short?: boolean,
 }
 
-export const LanguageSwitcher = ({ className }: LanguageSwitcherProps) => {
+export const LanguageSwitcher = ({ className, short }: LanguageSwitcherProps) => {
   const { t, i18n } = useTranslation();
 
   const toggle = () => {
@@ -15,10 +16,10 @@ export const LanguageSwitcher = ({ className }: LanguageSwitcherProps) => {
   return (
     <AppButton
       onClick={toggle}
-      theme={ThemeButton.BUTTON_DRIB}
+      theme={ThemeButton.DRIB}
       className={className}
     >
-      {t('Language')}
+      {t(short ? 'Language-short' : 'Language')}
     </AppButton>
   );
 };

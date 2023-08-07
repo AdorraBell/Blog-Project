@@ -18,7 +18,7 @@ export const PageError = ({ className }: PageErrorProps) => {
     <div className={classNames(cls.PageError, {}, [className])}>
       <p>{t('Something went wrong')}</p>
       <AppButton
-        theme={ThemeButton.CIRCLE_SHADOW}
+        theme={ThemeButton.SHADOW}
         onClick={reloadPage}
       >
         {t('Reload page')}

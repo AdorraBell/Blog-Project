@@ -23,14 +23,14 @@ type Story = StoryObj<typeof AppButton>;
 export const Drib: Story = {
   args: {
     children: 'text',
-    theme: ThemeButton.BUTTON_DRIB,
+    theme: ThemeButton.DRIB,
   },
 };
 
 export const DribDark = {
   args: {
     children: 'text',
-    theme: ThemeButton.BUTTON_DRIB,
+    theme: ThemeButton.DRIB,
   },
   decorators: [ThemeDecorator(Theme.DARK)],
 };
@@ -45,7 +45,7 @@ export const Clear: Story = {
 export const CurcleShadow: Story = {
   args: {
     children: 'text',
-    theme: ThemeButton.CIRCLE_SHADOW,
+    theme: ThemeButton.SHADOW,
   },
 
 };
@@ -53,7 +53,7 @@ export const CurcleShadow: Story = {
 export const CurcleShadowDark = {
   args: {
     children: 'text',
-    theme: ThemeButton.CIRCLE_SHADOW,
+    theme: ThemeButton.SHADOW,
   },
   decorators: [ThemeDecorator(Theme.DARK)],
 };

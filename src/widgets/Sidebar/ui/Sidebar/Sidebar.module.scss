@@ -6,8 +6,41 @@
   transition: width 0.5s;
 }
 
+.menuList {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+.icon {
+  fill: var(--inverted-color);
+  margin-bottom: 4px;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 40px;
+  position: absolute;
+}
+
+.menuPoint {
+  margin-bottom: 10px;
+}
+
 .collapsed {
   width: var(--sidebar-width-collapsed);
+
+  .link {
+    opacity: 0;
+    transition: 1s opacity;
+    position: absolute;
+  }
+
+  .icon {
+    position: relative;
+  }
 }
 
 .switchers {
@@ -24,7 +57,7 @@
 }
 
 .collapsedBtn {
-  margin-left: 3px;
+  margin-left: 4px;
   margin-bottom: 10px;
   padding-top: 12px;
 }

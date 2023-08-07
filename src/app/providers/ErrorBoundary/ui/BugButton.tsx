@@ -18,7 +18,7 @@ export const BugButton = () => {
 
   return (
     <AppButton
-      theme={ThemeButton.CIRCLE_SHADOW}
+      theme={ThemeButton.SHADOW}
       onClick={throwError}
     >
       {t('Throw Error')}

@@ -16,7 +16,7 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
   return (
     <AppButton
       onClick={toggleTheme}
-      theme={ThemeButton.BUTTON_DRIB}
+      theme={ThemeButton.DRIB}
       className={classNames(cls.ThemeSwitcher, {}, [className])}
     >
       { theme === Theme.LIGHT
