@@ -31,6 +31,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
         collapsed={collapsed}
         onClick={onToggle}
         className={cls.collapsedBtn}
+        data-testid="sidebar-toggle"
       />
       <div className={cls.menuList}>
         <AppLink
