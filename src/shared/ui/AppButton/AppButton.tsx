@@ -10,7 +10,8 @@ export enum ThemeButton {
 
 interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     className?: string
-    theme?: ThemeButton
+    theme?: ThemeButton,
+    dataTestid?: string
 }
 
 export const AppButton: FC<AppButtonProps> = (props) => {
@@ -18,6 +19,7 @@ export const AppButton: FC<AppButtonProps> = (props) => {
     className,
     children,
     theme,
+    dataTestid,
     ...otherProps
   } = props;
 
@@ -25,6 +27,7 @@ export const AppButton: FC<AppButtonProps> = (props) => {
     <button
       type="button"
       className={classNames(cls.Button, {}, [cls[theme], className])}
+      data-testid={dataTestid}
       {...otherProps}
     >
       {children}

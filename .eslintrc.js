@@ -33,7 +33,7 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'i18next/no-literal-string': [2, {
       markupOnly: true,
-      ignoreAttribute: ['to', 'data-testid', 'fallback'],
+      ignoreAttribute: ['to', 'data-testid', 'fallback', 'dataTestid'],
     }],
     'max-len': [1, {
       ignoreComments: true,

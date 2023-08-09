@@ -29,9 +29,9 @@ export const Sidebar = ({ className }: SidebarProps) => {
     >
       <CollapsedSidebarBtn
         collapsed={collapsed}
-        onClick={onToggle}
         className={cls.collapsedBtn}
-        data-testid="sidebar-toggle"
+        dataTestid="sidebar-toggle"
+        onClick={onToggle}
       />
       <div className={cls.menuList}>
         <AppLink
