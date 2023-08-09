@@ -6,10 +6,10 @@ on:
     branches: [ main ]
 jobs:
   pipeline:
-    runs-on: ubuntu-latest
+    runs-on: windows-2019
     strategy:
       matrix:
-        node-version: [ 17.x ]
+        node-version: [ 16.x ]
 
     steps:
       - uses: actions/checkout@v2
@@ -33,7 +33,7 @@ jobs:
       - name: build storybook
         if: always()
         run: npm run storybook:build
-      # - name: screenshot testing
-      #   run: npm run test:ui:ci
+      - name: screenshot testing
+        run: npm run test:ui:ci
 
 
