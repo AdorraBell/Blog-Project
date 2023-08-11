@@ -42,6 +42,14 @@ export const Clear: Story = {
   },
 };
 
+export const ClearDark = {
+  args: {
+    children: 'text',
+    theme: ThemeButton.CLEAR,
+  },
+  decorators: [ThemeDecorator(Theme.DARK)],
+};
+
 export const CurcleShadow: Story = {
   args: {
     children: 'text',
