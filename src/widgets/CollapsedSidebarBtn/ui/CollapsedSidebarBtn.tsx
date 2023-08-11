@@ -12,30 +12,33 @@ interface CollapsedSidebarBtnProps {
     dataTestid?: string
 }
 
-export const CollapsedSidebarBtn: FC<CollapsedSidebarBtnProps> = ({
-  className,
-  collapsed,
-  onClick,
-  dataTestid,
-}) => (
+export const CollapsedSidebarBtn: FC<CollapsedSidebarBtnProps> = (props) => {
+  const {
+    className,
+    collapsed,
+    onClick,
+    dataTestid,
+  } = props;
 
-  <AppButton
-    className={classNames(cls.CollasedSidebarBtn, {}, [className])}
-    theme={ThemeButton.DRIB}
-    type="button"
-    onClick={onClick}
-    dataTestid={dataTestid}
-  >
-    { collapsed
-      ? (
-        <MenuIcon
-          className={classNames(cls.icon, {}, [])}
-        />
-      )
-      : (
-        <CrossIcon
-          className={classNames(cls.icon, {}, [])}
-        />
-      )}
-  </AppButton>
-);
+  return (
+    <AppButton
+      className={classNames(cls.CollasedSidebarBtn, {}, [className])}
+      theme={ThemeButton.DRIB}
+      type="button"
+      onClick={onClick}
+      dataTestid={dataTestid}
+    >
+      { collapsed
+        ? (
+          <MenuIcon
+            className={classNames(cls.icon, {}, [])}
+          />
+        )
+        : (
+          <CrossIcon
+            className={classNames(cls.icon, {}, [])}
+          />
+        )}
+    </AppButton>
+  );
+};
