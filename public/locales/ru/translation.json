@@ -4,10 +4,11 @@
     "Language-short": "ENG",
     "Main": "Главная",
     "About": "О нас",
-    "Toggle": "Сайдбар",
+    "Toggle": "Добавить",
     "Page is not found": "Страница не найдена",
     "Go Home": "Вернуться на главную",
     "Something went wrong": "Произошла ошибка",
     "Reload page": "Перезагрузить страницу",
-    "Throw Error": "Создать ошибку"
+    "Throw Error": "Создать ошибку",
+    "Sign in": "Войти"
 }

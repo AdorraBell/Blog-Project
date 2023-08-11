@@ -1,7 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { AppButton, ThemeButton } from 'shared/ui/AppButton/AppButton';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { AppModal } from 'shared/ui/AppModal/AppModal';
 import cls from './Navbar.module.scss';
 
@@ -11,28 +11,28 @@ interface NavbarProps {
 
 export const Navbar = ({ className }: NavbarProps) => {
   const { t } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const toggleModal = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleModal = useCallback(() => {
+    setIsModalOpen(!isModalOpen);
+  }, [isModalOpen]);
 
   return (
     <div className={classNames(cls.Navbar, {}, [className])}>
       <div className={cls.links}>
         <AppButton
-          theme={ThemeButton.DRIB}
+          theme={ThemeButton.OUTLINE}
           onClick={toggleModal}
         >
-          {t('Toggle')}
+          {t('Sign in')}
         </AppButton>
-        <AppModal
-          isOpen={isOpen}
-          onClose={toggleModal}
-        >
-          lorem ipsum dolor sit amet, consectetur adipiscing elit. proin in ante viverra
-        </AppModal>
       </div>
+      <AppModal
+        isOpen={isModalOpen}
+        onClose={toggleModal}
+      >
+        {t('Sign in')}
+      </AppModal>
     </div>
   );
 };

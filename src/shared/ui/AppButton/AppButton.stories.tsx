@@ -57,3 +57,18 @@ export const CurcleShadowDark = {
   },
   decorators: [ThemeDecorator(Theme.DARK)],
 };
+
+export const Outline: Story = {
+  args: {
+    children: 'text',
+    theme: ThemeButton.OUTLINE,
+  },
+};
+
+export const OutlineDark = {
+  args: {
+    children: 'text',
+    theme: ThemeButton.OUTLINE,
+  },
+  decorators: [ThemeDecorator(Theme.DARK)],
+};

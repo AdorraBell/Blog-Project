@@ -3,6 +3,7 @@ import React, {
   ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
 import cls from './AppModal.module.scss';
+import { AppPortal } from '../AppPortal/AppPortal';
 
 interface AppModalProps {
     className?: string,
@@ -60,18 +61,21 @@ export const AppModal = (props: AppModalProps) => {
   };
 
   return (
-    <div className={classNames(cls.AppModal, mods, [className])}>
-      <div
-        className={cls.overlay}
-        onClick={closeHandler}
-      >
+    <AppPortal>
+      <div className={classNames(cls.AppModal, mods, [className])}>
         <div
-          className={cls.content}
-          onClick={onContentClick}
+          className={cls.overlay}
+          onClick={closeHandler}
         >
-          { children }
+          <div
+            className={cls.content}
+            onClick={onContentClick}
+          >
+            { children }
+          </div>
         </div>
       </div>
-    </div>
+    </AppPortal>
+
   );
 };
