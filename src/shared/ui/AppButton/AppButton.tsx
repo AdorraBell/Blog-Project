@@ -5,7 +5,8 @@ import cls from './AppButton.module.scss';
 export enum ThemeButton {
     CLEAR = 'clear',
     SHADOW = 'shadow',
-    DRIB = 'drib'
+    DRIB = 'drib',
+    OUTLINE = 'outline'
 }
 
 interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
@@ -18,7 +19,7 @@ export const AppButton: FC<AppButtonProps> = (props) => {
   const {
     className,
     children,
-    theme,
+    theme = ThemeButton.CLEAR,
     dataTestid,
     ...otherProps
   } = props;

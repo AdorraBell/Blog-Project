@@ -7,6 +7,7 @@
   border: none;
   background: none;
   outline: none;
+  color: var(--inverted-color);
 }
 
 .shadow {
@@ -22,6 +23,7 @@
     rgb(0 0 0 / 17%) 0 12px 13px,
     rgb(0 0 0 / 9%) 0 -3px 5px;
   padding: 2px 5px;
+  color: var(--inverted-color);
 }
 
 .drib {
@@ -39,4 +41,12 @@
   background-clip: border-box;
   padding: 2px 5px;
   color: var(--inverted-color);
+}
+
+.outline {
+  padding: 5px;
+  border: 2px solid var(--inverted-color);
+  color: var(--inverted-color);
+  border-radius: 5px;
+  background-color: transparent;
 }
