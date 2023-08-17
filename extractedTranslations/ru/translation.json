@@ -4,11 +4,14 @@
   "Go Home": "Go Home",
   "Increment": "Increment",
   "Language": "Language",
+  "Login": "Login",
   "Main": "Main",
   "Page is not found": "Page is not found",
+  "Password": "Password",
   "Reload page": "Reload page",
   "Sign in": "Sign in",
   "Something went wrong": "Something went wrong",
   "Throw Error": "Throw Error",
-  "Toggle": "Toggle"
+  "Toggle": "Toggle",
+  "title": "title"
 }

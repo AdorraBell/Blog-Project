@@ -1,0 +1,15 @@
+.AppInputWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputTitle {
+  font-size: var(--font-size-m);
+}
+
+.appInput {
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  padding: 5px;
+}

@@ -11,10 +11,6 @@ const meta: Meta<typeof AppButton> = {
   },
 
   tags: ['autodocs'],
-
-  // argTypes: {
-  //   backgroundColor: { control: 'color' },
-  // },
 };
 
 export default meta;
@@ -77,6 +73,21 @@ export const OutlineDark = {
   args: {
     children: 'text',
     theme: ThemeButton.OUTLINE,
+  },
+  decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const OutlineInverted: Story = {
+  args: {
+    children: 'text',
+    theme: ThemeButton.OUTLINE_INVERTED,
+  },
+};
+
+export const OutlineInvertedDark = {
+  args: {
+    children: 'text',
+    theme: ThemeButton.OUTLINE_INVERTED,
   },
   decorators: [ThemeDecorator(Theme.DARK)],
 };

@@ -12,5 +12,7 @@
     "Throw Error": "Создать ошибку",
     "Sign in": "Войти",
     "Decrement": "Декремент",
-    "Increment": "Инкремент"
+    "Increment": "Инкремент",
+    "Login": "Логин",
+    "Password": "Пароль"
 }

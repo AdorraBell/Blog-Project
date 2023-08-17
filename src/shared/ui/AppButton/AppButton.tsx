@@ -6,7 +6,8 @@ export enum ThemeButton {
     CLEAR = 'clear',
     SHADOW = 'shadow',
     DRIB = 'drib',
-    OUTLINE = 'outline'
+    OUTLINE = 'outline',
+    OUTLINE_INVERTED = 'outline_inverted'
 }
 
 interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
