@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { AppButton, ThemeButton } from 'shared/ui/AppButton/AppButton';
 import { useCallback, useState } from 'react';
-import { AppModal } from 'shared/ui/AppModal/AppModal';
+import { LoginModal } from 'features/AuthByUserName';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -21,18 +21,16 @@ export const Navbar = ({ className }: NavbarProps) => {
     <div className={classNames(cls.Navbar, {}, [className])}>
       <div className={cls.links}>
         <AppButton
-          theme={ThemeButton.OUTLINE}
+          theme={ThemeButton.OUTLINE_INVERTED}
           onClick={toggleModal}
         >
           {t('Sign in')}
         </AppButton>
       </div>
-      <AppModal
+      <LoginModal
         isOpen={isModalOpen}
         onClose={toggleModal}
-      >
-        {t('Sign in')}
-      </AppModal>
+      />
     </div>
   );
 };

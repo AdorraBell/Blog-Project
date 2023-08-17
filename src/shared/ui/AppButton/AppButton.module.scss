@@ -45,6 +45,14 @@
 
 .outline {
   padding: 5px;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.outline_inverted {
+  padding: 5px;
   border: 2px solid var(--inverted-color);
   color: var(--inverted-color);
   border-radius: 5px;

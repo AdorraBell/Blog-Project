@@ -11,5 +11,12 @@
     { "id": 2, "body": "some comment", "postId": 2 },
     { "id": 3, "body": "some comment", "postId": 3 }
   ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "123"
+    }
+  ],
   "profile": { "name": "typicode" }
 }
