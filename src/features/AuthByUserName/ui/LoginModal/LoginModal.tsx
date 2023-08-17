@@ -1,8 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppModal } from 'shared/ui/AppModal/AppModal';
-import { useTranslation } from 'react-i18next';
 import { LoginForm } from '../LoginForm/LoginForm';
-import cls from './LoginModal.module.scss';
 
 interface LoginModalProps {
     className?: string;
@@ -17,11 +15,9 @@ export const LoginModal = (props: LoginModalProps) => {
     onClose,
   } = props;
 
-  const { t } = useTranslation();
-
   return (
     <AppModal
-      className={classNames(cls.LoginModal, {}, [className])}
+      className={classNames('', {}, [className])}
       isOpen={isOpen}
       onClose={onClose}
       lazy
