@@ -1,22 +1,38 @@
 {
   "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" },
-    { "id": 2, "title": "json-server-2", "author": "typicode" },
-    { "id": 3, "title": "json-server-3", "author": "typicode" },
-    { "id": 4, "title": "json-server-4", "author": "typicode" },
-    { "id": 5, "title": "json-server-5", "author": "typicode" }
+    {
+      "id": "1",
+      "title": "json-server",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "title": "json-server",
+      "userId": "2"
+    }
   ],
   "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 2 },
-    { "id": 3, "body": "some comment", "postId": 3 }
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": "1"
+    }
   ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "admin",
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Ильдар",
+    "lastname": "Валиев",
+    "age": 19,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Kazan",
+    "username": "admin",
+    "avatar": "https://avatars.mds.yandex.net/get-yapic/23186/Y5z4VXlM9Zfn6bNG1QZD8HjFg-1/islands-retina-middle"
+  }
 }

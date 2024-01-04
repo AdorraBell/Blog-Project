@@ -4,7 +4,8 @@ import { AppButton, ThemeButton } from 'shared/ui/AppButton/AppButton';
 import { AppInput } from 'shared/ui/AppInput/AppInput';
 import { memo, useCallback, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getLoginState } from 'features/AuthByUserName/model/selectors/getLoginState/getLoginState';
+import { getLoginState } from '../../model/selectors/getLoginState/getLoginState';
+import { LoginByUserName } from '../../model/services/loginByUserName/loginByUserName';
 import { loginActions } from '../../model/slice/loginSlice';
 import cls from './LoginForm.module.scss';
 
@@ -27,6 +28,10 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
   const onChangePassword = useCallback((value: string) => {
     dispatch(loginActions.setPassword(value));
   }, [dispatch]);
+
+  const onLoginClick = useCallback(() => {
+    dispatch(LoginByUserName({ username, password }));
+  }, [dispatch, username, password]);
 
   const firstLineOnEnter = () => {
     setSecondLineFocus(true);
@@ -52,6 +57,7 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
       <AppButton
         theme={ThemeButton.OUTLINE}
         className={cls.logInBtn}
+        onClick={onLoginClick}
       >
         {t('Sign in')}
       </AppButton>
