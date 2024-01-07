@@ -4,6 +4,7 @@ import { AppButton, ThemeButton } from 'shared/ui/AppButton/AppButton';
 import { AppInput } from 'shared/ui/AppInput/AppInput';
 import { memo, useCallback, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { AppText, TextTheme } from 'shared/ui/AppText/AppText';
 import { getLoginState } from '../../model/selectors/getLoginState/getLoginState';
 import { LoginByUserName } from '../../model/services/loginByUserName/loginByUserName';
 import { loginActions } from '../../model/slice/loginSlice';
@@ -18,7 +19,12 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
   const [secondLineFocus, setSecondLineFocus] = useState(false);
 
   const dispatch = useDispatch();
-  const { username, password } = useSelector(getLoginState);
+  const {
+    username,
+    password,
+    error,
+    isLoading,
+  } = useSelector(getLoginState);
 
   const onChangeUsername = useCallback((value: string) => {
     dispatch(loginActions.setUsername(value));
@@ -39,6 +45,14 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
 
   return (
     <div className={classNames(cls.LoginForm, {}, [className])}>
+      <AppText title={t('Authorization form')} />
+      {error
+        && (
+          <AppText
+            theme={TextTheme.ERROR}
+            text={error}
+          />
+        )}
       <AppInput
         className={cls.liginInput}
         inputTitle={t('Login')}
@@ -58,6 +72,7 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
         theme={ThemeButton.OUTLINE}
         className={cls.logInBtn}
         onClick={onLoginClick}
+        disabled={isLoading}
       >
         {t('Sign in')}
       </AppButton>
