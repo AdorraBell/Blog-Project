@@ -50,7 +50,7 @@ module.exports = {
     }],
     'max-len': [1, {
       ignoreComments: true,
-      code: 100,
+      code: 150,
     }],
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
     'eslint-disable jsx-a11y/click-events-have-key-events': 'off',

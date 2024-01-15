@@ -91,3 +91,20 @@ export const OutlineInvertedDark = {
   },
   decorators: [ThemeDecorator(Theme.DARK)],
 };
+
+export const OutlineDisabled = {
+  args: {
+    children: 'text',
+    theme: ThemeButton.OUTLINE_INVERTED,
+    disabled: true,
+  },
+};
+
+export const OutlineDisabledDark = {
+  args: {
+    children: 'text',
+    theme: ThemeButton.OUTLINE_INVERTED,
+    disabled: true,
+  },
+  decorators: [ThemeDecorator(Theme.DARK)],
+};

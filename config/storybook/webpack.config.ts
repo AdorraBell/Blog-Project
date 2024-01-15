@@ -1,4 +1,4 @@
-import webpack, { RuleSetRule } from 'webpack';
+import webpack, { DefinePlugin, RuleSetRule } from 'webpack';
 import { BuildPaths } from '../build/types/config';
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
 
@@ -13,6 +13,21 @@ export default ({ config }: {config: webpack.Configuration}) => {
   };
   config.resolve?.modules?.push(paths.src);
   config.resolve?.extensions?.push('ts', 'tsx');
+
+  if (!config.resolve) {
+    config.resolve = {};
+  }
+
+  // Убедитесь, что объект 'resolve.alias' определен
+  if (!config.resolve.alias) {
+    config.resolve.alias = {};
+  }
+
+  // Добавляем алиас
+  config.resolve.alias = {
+    ...config.resolve.alias,
+    entities: path.resolve(__dirname, '..', '..', 'src', 'entities'),
+  };
 
   /* eslint-disable no-param-reassign */ // @ts-ignore
   config.module.rules = config.module.rules.map((rule: webpack.RuleSetRule) => {
@@ -30,6 +45,10 @@ export default ({ config }: {config: webpack.Configuration}) => {
   });
   config.module?.rules?.push(buildCssLoader(true)); // можно true, так как storybook будет использоваться только
   // на этапе разработки
+
+  config.plugins?.push(new DefinePlugin({
+    __IS_DEV__: true,
+  }));
 
   return config;
 };

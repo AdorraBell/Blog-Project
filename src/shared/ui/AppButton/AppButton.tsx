@@ -13,7 +13,8 @@ export enum ThemeButton {
 interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     className?: string
     theme?: ThemeButton,
-    dataTestid?: string
+    dataTestid?: string,
+    disabled?: boolean
 }
 
 export const AppButton: FC<AppButtonProps> = (props) => {
@@ -22,6 +23,7 @@ export const AppButton: FC<AppButtonProps> = (props) => {
     children,
     theme = ThemeButton.CLEAR,
     dataTestid,
+    disabled,
     ...otherProps
   } = props;
 
@@ -30,6 +32,7 @@ export const AppButton: FC<AppButtonProps> = (props) => {
       type="button"
       className={classNames(cls.Button, {}, [cls[theme], className])}
       data-testid={dataTestid}
+      disabled={disabled}
       {...otherProps}
     >
       {children}

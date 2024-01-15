@@ -1,5 +1,6 @@
 {
   "About": "About",
+  "Authorization form": "Authorization form",
   "Decrement": "Decrement",
   "Go Home": "Go Home",
   "Increment": "Increment",
@@ -10,8 +11,12 @@
   "Password": "Password",
   "Reload page": "Reload page",
   "Sign in": "Sign in",
+  "Sign out": "Sign out",
   "Something went wrong": "Something went wrong",
+  "The wrong login or password": "The wrong login or password",
   "Throw Error": "Throw Error",
   "Toggle": "Toggle",
-  "title": "title"
+  "Wrong login or password": "Wrong login or password",
+  "title": "title",
+  "Форма авторизации": "Форма авторизации"
 }

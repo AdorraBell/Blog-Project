@@ -11,8 +11,11 @@
     "Reload page": "Reload page",
     "Throw Error": "Throw Error",
     "Sign in": "Sign in",
+    "Sign out": "Sign out",
     "Decrement": "Decrement",
     "Increment": "Increment",
     "Login": "Login",
-    "Password": "Password"
+    "Password": "Password",
+    "Authorization form": "Authorization form",
+    "Wrong login or password": "Wrong login or password",
 }

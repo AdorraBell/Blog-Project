@@ -11,8 +11,11 @@
     "Reload page": "Перезагрузить страницу",
     "Throw Error": "Создать ошибку",
     "Sign in": "Войти",
+    "Sign out": "Выйти",
     "Decrement": "Декремент",
     "Increment": "Инкремент",
     "Login": "Логин",
-    "Password": "Пароль"
+    "Password": "Пароль",
+    "Authorization form": "Форма авторизации",
+    "Wrong login or password": "Неверный логин или пароль",
 }
